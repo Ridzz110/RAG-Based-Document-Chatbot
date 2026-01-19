@@ -1,5 +1,4 @@
 from typing import Dict, List
-import numpy as np
 from sentence_transformers import SentenceTransformer
 from vector_store import load_index
 
