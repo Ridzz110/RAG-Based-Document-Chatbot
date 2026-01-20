@@ -1,8 +1,10 @@
 from typing import Dict, List
 from sentence_transformers import SentenceTransformer
 from vector_store import load_index
+from monitoring import timed
 
-def retrieve_relevant_chunks (query: str, model: SentenceTransformer, top_k: int = 5) -> List[Dict]:
+@timed("Retriving FAISS Embeddings")
+def retrieve_relevant_chunks (query: str, model: SentenceTransformer, top_k: int = 3) -> List[Dict]:
     index, data = load_index()
     texts = data["texts"]
     metadatas = data["metadata"]

@@ -1,10 +1,10 @@
 import os
 import shutil
 import gradio as gr
-
+from monitoring import format_metrics_markdown
 from ingest import ingest_documents, chunk_documents
 from embed import load_embedding_model, embed_document
-from vector_store import save_index, create_faiss_index, load_index
+from vector_store import save_index, create_faiss_index
 from retrieve import retrieve_relevant_chunks
 from prompt import build_prompt
 from llm import generate_answer
@@ -61,6 +61,7 @@ def answer_question(query):
 
     retrieved_chunks = retrieve_relevant_chunks(query, embedding_model, top_k=3)
     prompt = build_prompt(query, retrieved_chunks)
+    print(prompt)
     answer = generate_answer(prompt)
 
     sources = []
@@ -123,6 +124,16 @@ with gr.Blocks(title="Local RAG Document Assistant") as demo:
             fn=answer_question,
             inputs=query_input,
             outputs=[answer_output, sources_output]
+        )
+
+    with gr.Tab("System Metrics"):
+        metrics_md = gr.Markdown()
+        refresh_btn = gr.Button("Refresh Metrics")
+
+        refresh_btn.click(
+            fn=format_metrics_markdown,
+            inputs=[],
+            outputs=metrics_md
         )
 
 

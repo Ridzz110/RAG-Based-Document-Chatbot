@@ -16,19 +16,14 @@ def build_prompt(query: str, retrieved_chunks: List[Dict]) -> str :
     You are a question-answering assistant.
 
     RULES (you MUST follow these):
-    - You must answer using ONLY the information in the context.
-    - Do NOT say you are an AI language model.
-    - Do NOT give generic advice.
-    - Do NOT mention access limitations.
-    - If the answer is not present in the context, reply EXACTLY with:
-    "I don't know based on the provided documents."
-
+    - Rules:
+    - Use only the provided context.
+    - Do not add external information.
+    - If not found, reply: "I don't know based on the provided documents."
     Context:
     {context}
-
     Question:
     {query}
-
     Answer:
     '''.strip()
 

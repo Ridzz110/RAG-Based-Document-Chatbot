@@ -1,6 +1,7 @@
 import os
 from typing import List, Dict
 from pathlib import Path
+from monitoring import timed
 
 import pdfplumber
 from docx import Document
@@ -92,6 +93,7 @@ def chunk_documents(documents: List[Dict]) -> List[Dict]:
     return chunked_docs
 
 #main ingestion function
+@timed("Document Ingestion")
 def ingest_documents(data_dir: str) -> List[Dict]:
     data_path = Path(data_dir)
     if not data_path.exists():
