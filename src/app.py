@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 import os
 import shutil
 import gradio as gr
@@ -138,4 +140,4 @@ with gr.Blocks(title="Local RAG Document Assistant") as demo:
 
 
 if __name__ == "__main__":
-    demo.launch(share=True)
+    demo.launch()

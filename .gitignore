@@ -3,3 +3,4 @@ data/docs/*
 venv/
 .gradio/
 logs/
+.env
