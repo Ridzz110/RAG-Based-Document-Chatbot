@@ -1,3 +1,13 @@
+---
+title: Local RAG Document Q&A Chatbot
+emoji: 📄
+colorFrom: green
+colorTo: teal
+sdk: gradio
+sdk_version: "6.2.0"
+app_file: src/app.py
+pinned: false
+---
 # Local RAG-Based Document Q&A Chatbot
 
 A local, retrieval-augmented generation (RAG) chatbot for querying your own documents. This project allows you to upload documents (PDF, DOCX, TXT), prepare them, and interact with them via a lightweight, locally running language model. It is designed to be computationally efficient, suitable for standard laptops.
