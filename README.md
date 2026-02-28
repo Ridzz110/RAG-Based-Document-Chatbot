@@ -63,8 +63,8 @@ All Python dependencies are listed in requirements.txt.
 
 Clone the repository:
 ```
-git clone https://github.com/Ridzz110/Local-RAG-Based-Document-Q-A-Chatbot.git
-cd Local-RAG-Based-Document-Q-A-Chatbot
+git clone https://github.com/Ridzz110/RAG-Based-Document-Chatbot.git
+cd RAG-Based-Document-Chatbot
 ```
 Set up Python virtual environment:
 ```
