@@ -1,5 +1,5 @@
 
-# Local RAG-Based Document Q&A Chatbot [![Live Demo](https://img.shields.io/badge/🤗%20Hugging%20Face-Live%20Demo-blue)](https://huggingface.co/spaces/ridzzzzzzzzzzzzzz/local-rag-based-document-qa-chatbot)
+# RAG-Based Document Chatbot [![Live Demo](https://img.shields.io/badge/🤗%20Hugging%20Face-Live%20Demo-blue)](https://huggingface.co/spaces/ridzzzzzzzzzzzzzz/local-rag-based-document-qa-chatbot)
 
 A local, retrieval-augmented generation (RAG) chatbot for querying your own documents. This project allows you to upload documents (PDF, DOCX, TXT), prepare them, and interact with them. Works great for research and study session ;)
 
