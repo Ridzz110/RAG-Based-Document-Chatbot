@@ -82,8 +82,8 @@ def get_current_docs():
     return docs
 
 # Gradio UI
-with gr.Blocks(title="Local RAG Document Assistant") as demo:
-    gr.Markdown("## Offline RAG-Based Document Assistant")
+with gr.Blocks(title="RAG Document Assistant") as demo:
+    gr.Markdown("## RAG-Based Document Assistant")
 
     with gr.Tab("Upload Documents"):
         with gr.Column(scale=1):
